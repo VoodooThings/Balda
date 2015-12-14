@@ -7,7 +7,7 @@
 
 		public Game()
 		{
-			Board =new char[5,5];
+			Board = new char[5, 5];
 			SpellChecker = new SpellChecker(@"words.txt");
 			var balda = "балда";
 			for (int i = 0; i < 5; i++)
@@ -23,6 +23,11 @@
 				return ' ';
 			}
 			return Board[i, j];
+		}
+
+		public void TryAddLetter(int i, int j, char c)
+		{
+			Board[i, j] = c;
 		}
 	}
 }
