@@ -15,5 +15,14 @@
 				Board[2, i] = balda[i];
 			}
 		}
+
+		public char GetSymbolAt(int i, int j)
+		{
+			if (i >= 5 || j >= 5 || i < 0 || j < 0)
+			{
+				return ' ';
+			}
+			return Board[i, j];
+		}
 	}
 }
