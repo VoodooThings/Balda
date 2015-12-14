@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Balda
 {
-	public partial class Form1 : Form
+	public partial class BaldaForm : Form
 	{
-		public Form1()
+		private Game Game;
+
+		public BaldaForm()
 		{
 			InitializeComponent();
+			Game = new Game();
+		}
+
+		private void Update()
+		{
+			
 		}
 	}
 }
