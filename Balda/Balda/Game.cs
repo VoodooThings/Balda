@@ -1,4 +1,5 @@
-﻿using System.Net.NetworkInformation;
+﻿using System;
+using System.Net.NetworkInformation;
 
 namespace Balda
 {
@@ -8,6 +9,7 @@ namespace Balda
 		private SpellChecker SpellChecker;
 		private GameState GameState;
 		private bool[,] ChosenLetters;
+		private Tuple<int, int> LastChosenLetter;
 
 
 		public Game()
@@ -44,15 +46,23 @@ namespace Balda
 				return false;
 			}
 			return ChosenLetters[i, j];
-
 		}
+
+		public Tuple<int, int> GetLastChosen()
+		{
+			return LastChosenLetter;
+		} 
 
 		public bool TryAddLetter(int i, int j, char c)
 		{
+			if (GameState != GameState.Initial)
+				return false;
 			if (Board[i, j] == ' ')
 			{
 				Board[i, j] = c;
-				GameState = GameState.WaitingForAFirstLetterOfWord;
+				GameState = GameState.WaitingForNextLetter;
+				LastChosenLetter = Tuple.Create(i, j);
+				ChosenLetters[i, j] = true;
 				return true;
 			}
 			return false;
@@ -64,18 +74,19 @@ namespace Balda
 			{
 				return false;
 			}
-			if (GameState == GameState.WaitingForAFirstLetterOfWord)
+			if (GameState == GameState.WaitingForNextLetter && (Math.Abs(i - LastChosenLetter.Item1)+ Math.Abs(j - LastChosenLetter.Item2)<2))
 			{
 				ChosenLetters[i, j] = true;
-				GameState = GameState.WaitingForLetters;
+				LastChosenLetter = Tuple.Create(i, j);
 				return true;
 			}
+			return false;
+		}
+		
 
-			if (!IsChosenAt(i - 1, j) && !IsChosenAt(i + 1, j) &&
-				!IsChosenAt(i, j - 1) && !IsChosenAt(i, j + 1))
-				return false;
-			ChosenLetters[i, j] = true;
-			return true;
+		public GameState GetGameState()
+		{
+			return GameState;
 		}
 	}
 }

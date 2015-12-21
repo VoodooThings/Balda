@@ -17,7 +17,6 @@ namespace Balda
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new BaldaForm());
-			Game game =new Game();
 		}
 	}
 }

@@ -104,6 +104,7 @@
 			// label5
 			// 
 			this.label5.AutoSize = true;
+			this.label5.BackColor = System.Drawing.SystemColors.Control;
 			this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.label5.Location = new System.Drawing.Point(140, 16);
 			this.label5.MinimumSize = new System.Drawing.Size(25, 25);

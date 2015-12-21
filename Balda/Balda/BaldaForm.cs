@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Balda
@@ -25,174 +26,199 @@ namespace Balda
 
 		private void UpdateBoard()
 		{
+			var lastChosen = Game.GetLastChosen();
 			for (int i = 0; i < 5; i++)
 			{
 				for (int j = 0; j < 5; j++)
 				{
 					BoardLabels[i][j].Text = Game.GetSymbolAt(i, j).ToString().ToUpperInvariant();
+					if (Game.IsChosenAt(i, j))
+					{
+						if (lastChosen.Item1 == i && lastChosen.Item2 == j)
+						{
+							BoardLabels[i][j].BackColor = Color.Crimson;
+						}
+						else
+						{
+							BoardLabels[i][j].BackColor = Color.Aqua;
+						}
+					}
+					else
+						BoardLabels[i][j].BackColor = Color.White;
+
 				}
 			}
+
+
 		}
 
-		private void AddLetter(int i, int j)
+		private void PunchBoardSquare(int i, int j)
 		{
 			try
 			{
-				Game.TryAddLetter(i, j, letterBox.SelectedItem.ToString()[0]);
-				UpdateBoard();
+				var gState = Game.GetGameState();
+				if (gState == GameState.Initial)
+				{
+					Game.TryAddLetter(i, j, letterBox.SelectedItem.ToString()[0]);
+				}
+				else
+				{
+					Game.TryChooseLetter(i, j);
+				}
 			}
 			catch (Exception e)
 			{
 				Console.WriteLine(e.Message);
 			}
+			UpdateBoard();
 		}
 
 		#region Прости меня Бог
 		private void label1_Click(object sender, EventArgs e)
 		{
-			AddLetter(0, 0);
+			PunchBoardSquare(0, 0);
 		}
 
 		private void label2_Click(object sender, EventArgs e)
 		{
-			AddLetter(0, 1);
+			PunchBoardSquare(0, 1);
 		}
 
 		private void label3_Click(object sender, EventArgs e)
 		{
 
-			AddLetter(0, 2);
+			PunchBoardSquare(0, 2);
 		}
 
 		private void label4_Click(object sender, EventArgs e)
 		{
-			AddLetter(0, 3);
+			PunchBoardSquare(0, 3);
 
 		}
 
 		private void label5_Click(object sender, EventArgs e)
 		{
-			AddLetter(0, 4);
+			PunchBoardSquare(0, 4);
 
 		}
 
 		private void label6_Click(object sender, EventArgs e)
 		{
-			AddLetter(1, 0);
+			PunchBoardSquare(1, 0);
 
 		}
 
 		private void label7_Click(object sender, EventArgs e)
 		{
-			AddLetter(1, 1);
+			PunchBoardSquare(1, 1);
 
 		}
 
 		private void label8_Click(object sender, EventArgs e)
 		{
-			AddLetter(1, 2);
+			PunchBoardSquare(1, 2);
 
 		}
 
 		private void label9_Click(object sender, EventArgs e)
 		{
-			AddLetter(1, 3);
+			PunchBoardSquare(1, 3);
 
 		}
 
 		private void label10_Click(object sender, EventArgs e)
 		{
-			AddLetter(1, 4);
+			PunchBoardSquare(1, 4);
 
 		}
 
 		private void label11_Click(object sender, EventArgs e)
 		{
-			AddLetter(2, 0);
+			PunchBoardSquare(2, 0);
 
 		}
 
 		private void label12_Click(object sender, EventArgs e)
 		{
-			AddLetter(2, 1);
+			PunchBoardSquare(2, 1);
 
 		}
 
 		private void label13_Click(object sender, EventArgs e)
 		{
-			AddLetter(2, 2);
+			PunchBoardSquare(2, 2);
 
 		}
 
 		private void label14_Click(object sender, EventArgs e)
 		{
-			AddLetter(2, 3);
+			PunchBoardSquare(2, 3);
 
 		}
 
 		private void label15_Click(object sender, EventArgs e)
 		{
-			AddLetter(2, 4);
+			PunchBoardSquare(2, 4);
 
 		}
 
 		private void label16_Click(object sender, EventArgs e)
 		{
-			AddLetter(3, 0);
+			PunchBoardSquare(3, 0);
 
 		}
 
 		private void label17_Click(object sender, EventArgs e)
 		{
-			AddLetter(3, 1);
+			PunchBoardSquare(3, 1);
 
 		}
 
 		private void label18_Click(object sender, EventArgs e)
 		{
-			AddLetter(3, 2);
+			PunchBoardSquare(3, 2);
 
 		}
 
 		private void label19_Click(object sender, EventArgs e)
 		{
-			AddLetter(3, 3);
+			PunchBoardSquare(3, 3);
 
 		}
 
 		private void label20_Click(object sender, EventArgs e)
 		{
-			AddLetter(3, 4);
+			PunchBoardSquare(3, 4);
 
 		}
 
 		private void label21_Click(object sender, EventArgs e)
 		{
-			AddLetter(4, 0);
+			PunchBoardSquare(4, 0);
 
 		}
 
 		private void label22_Click(object sender, EventArgs e)
 		{
-			AddLetter(4, 1);
+			PunchBoardSquare(4, 1);
 
 		}
 
 		private void label23_Click(object sender, EventArgs e)
 		{
-			AddLetter(4, 2);
+			PunchBoardSquare(4, 2);
 
 		}
 
 		private void label24_Click(object sender, EventArgs e)
 		{
-			AddLetter(4, 3);
+			PunchBoardSquare(4, 3);
 
 		}
 
 		private void label25_Click(object sender, EventArgs e)
 		{
-			AddLetter(4, 4);
+			PunchBoardSquare(4, 4);
 
 		}
 		#endregion

@@ -3,7 +3,6 @@
 	public enum GameState
 	{
 		Initial,
-		WaitingForAFirstLetterOfWord,
-		WaitingForLetters
+		WaitingForNextLetter
 	}
 }
