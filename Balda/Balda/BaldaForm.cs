@@ -47,149 +47,149 @@ namespace Balda
 			}
 		}
 		#region Прости меня Бог
-		private void label1_Click(object sender, System.EventArgs e)
+		private void label1_Click(object sender, EventArgs e)
 		{
 			AddLetter(0, 0);
 		}
 
-		private void label2_Click(object sender, System.EventArgs e)
+		private void label2_Click(object sender, EventArgs e)
 		{
 			AddLetter(0, 1);
 		}
 
-		private void label3_Click(object sender, System.EventArgs e)
+		private void label3_Click(object sender, EventArgs e)
 		{
 
 			AddLetter(0, 2);
 		}
 
-		private void label4_Click(object sender, System.EventArgs e)
+		private void label4_Click(object sender, EventArgs e)
 		{
 			AddLetter(0, 3);
 
 		}
 
-		private void label5_Click(object sender, System.EventArgs e)
+		private void label5_Click(object sender, EventArgs e)
 		{
 			AddLetter(0, 4);
 
 		}
 
-		private void label6_Click(object sender, System.EventArgs e)
+		private void label6_Click(object sender, EventArgs e)
 		{
 			AddLetter(1, 0);
 
 		}
 
-		private void label7_Click(object sender, System.EventArgs e)
+		private void label7_Click(object sender, EventArgs e)
 		{
 			AddLetter(1, 1);
 
 		}
 
-		private void label8_Click(object sender, System.EventArgs e)
+		private void label8_Click(object sender, EventArgs e)
 		{
 			AddLetter(1, 2);
 
 		}
 
-		private void label9_Click(object sender, System.EventArgs e)
+		private void label9_Click(object sender, EventArgs e)
 		{
 			AddLetter(1, 3);
 
 		}
 
-		private void label10_Click(object sender, System.EventArgs e)
+		private void label10_Click(object sender, EventArgs e)
 		{
 			AddLetter(1, 4);
 
 		}
 
-		private void label11_Click(object sender, System.EventArgs e)
+		private void label11_Click(object sender, EventArgs e)
 		{
 			AddLetter(2, 0);
 
 		}
 
-		private void label12_Click(object sender, System.EventArgs e)
+		private void label12_Click(object sender, EventArgs e)
 		{
 			AddLetter(2, 1);
 
 		}
 
-		private void label13_Click(object sender, System.EventArgs e)
+		private void label13_Click(object sender, EventArgs e)
 		{
 			AddLetter(2, 2);
 
 		}
 
-		private void label14_Click(object sender, System.EventArgs e)
+		private void label14_Click(object sender, EventArgs e)
 		{
 			AddLetter(2, 3);
 
 		}
 
-		private void label15_Click(object sender, System.EventArgs e)
+		private void label15_Click(object sender, EventArgs e)
 		{
 			AddLetter(2, 4);
 
 		}
 
-		private void label16_Click(object sender, System.EventArgs e)
+		private void label16_Click(object sender, EventArgs e)
 		{
 			AddLetter(3, 0);
 
 		}
 
-		private void label17_Click(object sender, System.EventArgs e)
+		private void label17_Click(object sender, EventArgs e)
 		{
 			AddLetter(3, 1);
 
 		}
 
-		private void label18_Click(object sender, System.EventArgs e)
+		private void label18_Click(object sender, EventArgs e)
 		{
 			AddLetter(3, 2);
 
 		}
 
-		private void label19_Click(object sender, System.EventArgs e)
+		private void label19_Click(object sender, EventArgs e)
 		{
 			AddLetter(3, 3);
 
 		}
 
-		private void label20_Click(object sender, System.EventArgs e)
+		private void label20_Click(object sender, EventArgs e)
 		{
 			AddLetter(3, 4);
 
 		}
 
-		private void label21_Click(object sender, System.EventArgs e)
+		private void label21_Click(object sender, EventArgs e)
 		{
 			AddLetter(4, 0);
 
 		}
 
-		private void label22_Click(object sender, System.EventArgs e)
+		private void label22_Click(object sender, EventArgs e)
 		{
 			AddLetter(4, 1);
 
 		}
 
-		private void label23_Click(object sender, System.EventArgs e)
+		private void label23_Click(object sender, EventArgs e)
 		{
 			AddLetter(4, 2);
 
 		}
 
-		private void label24_Click(object sender, System.EventArgs e)
+		private void label24_Click(object sender, EventArgs e)
 		{
 			AddLetter(4, 3);
 
 		}
 
-		private void label25_Click(object sender, System.EventArgs e)
+		private void label25_Click(object sender, EventArgs e)
 		{
 			AddLetter(4, 4);
 
